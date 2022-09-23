@@ -1,11 +1,16 @@
-$primary-color: rgb(206, 162, 229);
-$secondary-color: rgb(62, 60, 77);
-$background-color: rgb(118, 102, 81);
+$primary-color: #878F94;
+$secondary-color:#272B30;
+$background-color:tan;
+/* $background-color:#4B4F54; */
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: sans-serif ;
+    /* Font should be a variable */
 }
 
 nav,
@@ -18,13 +23,14 @@ nav * {
   height: 50px;
   font-size: 1.25em;
   background-color: $secondary-color;
-  color: $secondary-color;
+  color: $primary-color;
 }
 
 #name {
   width: 15%;
   height: 100%;
-  background-color: $primary-color;
+  /* background-color: $primary-color; */
+  color: $background-color;
   justify-content: center;
 }
 
@@ -37,14 +43,14 @@ nav * {
 a {
   width: 30%;
   height: 100%;
-  color:  $primary-color;
+  color: $background-color;
   justify-content: center;;
   text-decoration: none;
   justify-content: center;
 }
 
 a:hover {
-  background-color: $primary-color;
+  background-color:$background-color;
   justify-content: center;;
   color: $secondary-color;
 }
@@ -66,19 +72,46 @@ section {
       width: 90vw;
       height: 40vh;
       
-      div {
-        
         h1 {
           margin: 100px 10px;
+          text-align: center;
         }
         p {
           margin: 100px 500px;
+          border: 200px 200px;
         }
-      }}
+      }
 
-.projects {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50rem;
+  background: url("https://t3.ftcdn.net/jpg/03/99/09/66/360_F_399096694_rI4J6yHpEaijvG36k8ybRFrqKpKp6pOn.jpg") center center no-repeat;
+  background-size: cover;
+  color: #ffb78c;
 }
+
+.flex-container--projects {
+  display: flex;
+  flex-direction: row;
+
+  div {
+    background-color: $secondary-color;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
+footer {
+  background-color: $secondary-color;
+  color: $primary-color;
+}
+
+
+
 
