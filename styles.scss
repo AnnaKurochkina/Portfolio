@@ -1,16 +1,23 @@
 $primary-color: #878F94;
 $secondary-color:#272B30;
-$background-color:tan;
+$background-color:#ffb78c;
 /* $background-color:#4B4F54; */
 
+
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@700&family=Open+Sans&display=swap');
+$font-headings: 'Amaranth', sans-serif;
+$font-text: 'Open Sans', sans-serif;
 
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif ;
-    /* Font should be a variable */
+    font-family: $font-text;
+}
+
+h1 {
+  font-family: $font-headings;
 }
 
 nav,
@@ -29,7 +36,6 @@ nav * {
 #name {
   width: 15%;
   height: 100%;
-  /* background-color: $primary-color; */
   color: $background-color;
   justify-content: center;
 }
@@ -61,6 +67,7 @@ main {
     justify-content: center;
     align-items: center;
     background-color: $background-color;
+    color: $secondary-color;
 }
 
 
@@ -69,12 +76,11 @@ section {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 90vw;
-      height: 40vh;
       
         h1 {
           margin: 100px 10px;
           text-align: center;
+          font-size: 50px;
         }
         p {
           margin: 100px 500px;
@@ -88,9 +94,15 @@ section {
   justify-content: center;
   align-items: center;
   height: 50rem;
-  background: url("https://t3.ftcdn.net/jpg/03/99/09/66/360_F_399096694_rI4J6yHpEaijvG36k8ybRFrqKpKp6pOn.jpg") center center no-repeat;
+  /* background: url("https://t3.ftcdn.net/jpg/03/99/09/66/360_F_399096694_rI4J6yHpEaijvG36k8ybRFrqKpKp6pOn.jpg") center center no-repeat; */
+  background: url("https://media.istockphoto.com/photos/old-wall-pattern-texture-cement-blue-dark-abstract-blue-color-design-picture-id1288852672?b=1&k=20&m=1288852672&s=170667a&w=0&h=LjkyX5l647s6zXRSfN5AbI7UU7m_jFncv_2OCc9gbqg=") center center no-repeat;
+ /*  background: url("https://cdn11.bigcommerce.com/s-5v2qks90xv/images/stencil/500x659/products/572/1596/SFTOM30-2__06133.1514761865.jpg?c=2") center center no-repeat; */
+  
   background-size: cover;
   color: #ffb78c;
+
+  margin: 20px 20px 20px 20px;
+      border-radius: 20px;
 }
 
 .flex-container--projects {
@@ -98,13 +110,27 @@ section {
   flex-direction: row;
 
   div {
-    background-color: $secondary-color;
+    background-color: $primary-color;
     margin: 10px;
     padding: 20px;
     font-size: 30px;
     flex-wrap: wrap;
     flex-direction: row;
   }
+}
+
+.flex-container--aside {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+
+ /*  aside {
+    div {
+      display: inline-block;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  } */
 }
 
 footer {

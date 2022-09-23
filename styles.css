@@ -1,10 +1,14 @@
 /* $background-color:#4B4F54; */
+@import url("https://fonts.googleapis.com/css2?family=Amaranth:wght@700&family=Open+Sans&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
-  /* Font should be a variable */
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Amaranth", sans-serif;
 }
 
 nav,
@@ -23,8 +27,7 @@ nav * {
 #name {
   width: 15%;
   height: 100%;
-  /* background-color: $primary-color; */
-  color: tan;
+  color: #ffb78c;
   justify-content: center;
 }
 
@@ -37,14 +40,14 @@ nav * {
 a {
   width: 30%;
   height: 100%;
-  color: tan;
+  color: #ffb78c;
   justify-content: center;
   text-decoration: none;
   justify-content: center;
 }
 
 a:hover {
-  background-color: tan;
+  background-color: #ffb78c;
   justify-content: center;
   color: #272B30;
 }
@@ -54,7 +57,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: tan;
+  background-color: #ffb78c;
+  color: #272B30;
 }
 
 section {
@@ -62,12 +66,11 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90vw;
-  height: 40vh;
 }
 section h1 {
   margin: 100px 10px;
   text-align: center;
+  font-size: 50px;
 }
 section p {
   margin: 100px 500px;
@@ -80,9 +83,13 @@ section p {
   justify-content: center;
   align-items: center;
   height: 50rem;
-  background: url("https://t3.ftcdn.net/jpg/03/99/09/66/360_F_399096694_rI4J6yHpEaijvG36k8ybRFrqKpKp6pOn.jpg") center center no-repeat;
+  /* background: url("https://t3.ftcdn.net/jpg/03/99/09/66/360_F_399096694_rI4J6yHpEaijvG36k8ybRFrqKpKp6pOn.jpg") center center no-repeat; */
+  background: url("https://media.istockphoto.com/photos/old-wall-pattern-texture-cement-blue-dark-abstract-blue-color-design-picture-id1288852672?b=1&k=20&m=1288852672&s=170667a&w=0&h=LjkyX5l647s6zXRSfN5AbI7UU7m_jFncv_2OCc9gbqg=") center center no-repeat;
+  /*  background: url("https://cdn11.bigcommerce.com/s-5v2qks90xv/images/stencil/500x659/products/572/1596/SFTOM30-2__06133.1514761865.jpg?c=2") center center no-repeat; */
   background-size: cover;
   color: #ffb78c;
+  margin: 20px 20px 20px 20px;
+  border-radius: 20px;
 }
 
 .flex-container--projects {
@@ -90,12 +97,25 @@ section p {
   flex-direction: row;
 }
 .flex-container--projects div {
-  background-color: #272B30;
+  background-color: #878F94;
   margin: 10px;
   padding: 20px;
   font-size: 30px;
   flex-wrap: wrap;
   flex-direction: row;
+}
+
+.flex-container--aside {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  /*  aside {
+     div {
+       display: inline-block;
+       flex-direction: row;
+       justify-content: space-between;
+     }
+   } */
 }
 
 footer {
