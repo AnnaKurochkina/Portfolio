@@ -34,7 +34,7 @@ nav * {
 }
 
 #name {
-  width: 15%;
+  width: 25%;
   height: 100%;
   color: $background-color;
   justify-content: center;
@@ -70,30 +70,12 @@ main {
     color: $secondary-color;
 }
 
-
-section {
-    display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      
-        h1 {
-          margin: 100px 10px;
-          text-align: center;
-          font-size: 50px;
-        }
-        p {
-          margin: 100px 500px;
-          border: 200px 200px;
-        }
-      }
-
 .banner {
-  display: flex;
-  flex-direction: column;
+  display: flex;/* 
+  flex-direction: column; */
   justify-content: center;
   align-items: center;
-  height: 50rem;
+  height: 20rem;
   /* background: url("https://t3.ftcdn.net/jpg/03/99/09/66/360_F_399096694_rI4J6yHpEaijvG36k8ybRFrqKpKp6pOn.jpg") center center no-repeat; */
   background: url("https://media.istockphoto.com/photos/old-wall-pattern-texture-cement-blue-dark-abstract-blue-color-design-picture-id1288852672?b=1&k=20&m=1288852672&s=170667a&w=0&h=LjkyX5l647s6zXRSfN5AbI7UU7m_jFncv_2OCc9gbqg=") center center no-repeat;
  /*  background: url("https://cdn11.bigcommerce.com/s-5v2qks90xv/images/stencil/500x659/products/572/1596/SFTOM30-2__06133.1514761865.jpg?c=2") center center no-repeat; */
@@ -101,44 +83,29 @@ section {
   background-size: cover;
   color: #ffb78c;
 
-  margin: 20px 20px 20px 20px;
+  margin: 20px;
       border-radius: 20px;
+      font-size: 50px;
 }
 
-.flex-container--projects {
-  display: flex;
-  flex-direction: row;
 
-  div {
-    background-color: $primary-color;
-    margin: 10px;
-    padding: 20px;
-    font-size: 30px;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-}
-
-.flex-container--aside {
-  display: flex;
-  justify-content: space-between;
-  /* flex-direction: row; */
+.grid-container--about {
+  display: grid;
+  gap: 20px 350px;
+  grid-template-columns: auto auto;
   font-size: 20px;
 
- 
-    div {
-      /* display: flex;
-      flex-direction: row;
-      justify-content: space-between; */
-     /*  margin: 20px;
-      padding: 100px; */
+  div:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    
+  }
 
-      width: 50%;
-     /*  height: 100px; */
-      display: inline-block;
- 
-    }
-  
+  .grid-item {
+    font-size: 20px;
+    padding: 90px;
+  }
 }
 
 footer {
@@ -148,3 +115,53 @@ footer {
 
 
 
+
+
+.grid-container--projects {
+  display: grid;
+  gap: 70px 150px;
+  grid-template-columns: auto auto auto;
+
+  div:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: $background-color;
+    border: none;
+  }
+
+  .grid-item {
+    background-color: $primary-color;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+
+
+mark { 
+  background-color: blue;
+  color: $background-color;
+}
+
+span {
+  font-size: 30px;
+  font-family: $font-headings;
+}
+
+
+
+
+
+
+.skills {
+      display: flex;
+      justify-content: space-around;
+      align-items: stretch;
+      padding: 50px;
+
+      h1, p {
+        padding: 30px;
+      }
+  }
