@@ -115,27 +115,14 @@ main {
  /* Mobile View */
  @media screen and (min-width: 390px) and (max-width: 844px) {
   .grid-container--banner {
-    display: grid;
+  display: grid;
   gap: 20px;
   grid-template-columns: repeat(1, 1fr);
-  font-size: 20px;
   padding: 20px;
-
-  div:nth-child(1) {
-  justify-self: center;
-  align-self: center;
-  }
-
 
   div:nth-child(2) {
     position:relative;
     }
-
-
-  .grid-item {
-    font-size: 50px;
-  opacity: 0.8;
-  }
   }
 }
 
@@ -231,22 +218,11 @@ span {
   @media screen and (min-width: 390px) and (max-width: 844px) {
     .grid-container--projects {
       display: grid;
-      gap: 70px 150px;
-      grid-template-columns: repeat(1,1fr);
+      grid-template-columns: repeat(1, 1fr);
 
       div:nth-child(1) {
         grid-column-start: 1;
         grid-column-end: 1;
-        background-color: $background-color;
-        border: none;
-      }
-
-      .grid-item {
-        background-color: $gray-800;
-        border: 1px solid rgba(0, 0, 0, 0.8);
-        padding: 20px;
-        font-size: 30px;
-        text-align: center;
       }
     }
   }
@@ -255,68 +231,27 @@ span {
   @media screen and (min-width: 834px) and (max-width: 1194px) {
     .grid-container--projects {
       display: grid;
-      gap: 70px 150px;
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(3, 1fr);
 
       div:nth-child(1) {
         grid-column-start: 1;
         grid-column-end: 4;
-        background-color: $background-color;
-        border: none;
-      }
-
-      .grid-item {
-        background-color: $gray-800;
-        border: 1px solid rgba(0, 0, 0, 0.8);
-        padding: 20px;
-        font-size: 30px;
-        text-align: center;
-      }
     }
-  }
+  } 
+}
    /* Laptop View */
-  @media screen and (min-width: 1140px) and (max-width: 900px) {
+  /* @media screen and (min-width: 1140px) and (max-width: 900px) {
     .grid-container--projects {
       display: grid;
-      gap: 70px 150px;
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns: repeat(4, 1fr);
 
       div:nth-child(1) {
         grid-column-start: 1;
         grid-column-end: 5;
-        background-color: $background-color;
-        border: none;
-      }
-
-      .grid-item {
-        background-color: $gray-800;
-        border: 1px solid rgba(0, 0, 0, 0.8);
-        padding: 20px;
-        font-size: 30px;
-        text-align: center;
       }
     }
   }
-
-
-
-
-
-/* @media screen and (min-width: 900px) {
-  .grid-container--projects { 
-    display: grid;
-    grid-template-columns:  repeat(2, 1fr); }
-} */
-
-
-
-
-
-
-
-
-
-
+ */
 .grid-container--skills {
   display: grid;
   gap: 30px ;
@@ -368,14 +303,12 @@ span {
     div:nth-child(1) {
       grid-column-start: 1;
       grid-column-end: 4;
-      text-align: start;
-      padding: 20px;
+      padding: 40px;
       font-size: 20px;
       /* background: url("BottomPicture.jpg") center center no-repeat; */
   
       h1 {
         text-align: center;
-        
         padding-bottom: 30px;
       }
     }
@@ -390,65 +323,30 @@ span {
 @media screen and (min-width: 390px) and (max-width: 844px) {
   .grid-container--about {
     display: grid;
-    gap: 10px 10px;
     grid-template-columns: repeat(1, 1fr);
-    font-size: 20px;
-    padding: 20px;
   
     div:nth-child(1) {
       grid-column-start: 1;
       grid-column-end: 1;
-      text-align: start;
-      padding: 20px;
-      font-size: 20px;
-      /* background: url("BottomPicture.jpg") center center no-repeat; */
-  
-      h1 {
-        text-align: center;
-        
-        padding-bottom: 30px;
-      }
-    }
-  
-    .grid-item {
-      font-size: 20px;
-      padding: 90px;
     }
   }
 }
 
  /* Tablet View */
- @media screen and (min-width: 834px) and (max-width: 1194px) {
+@media screen and (min-width: 834px) and (max-width: 1194px) {
   .grid-container--about {
     display: grid;
-    gap: 10px 10px;
-    padding: 20px;
     grid-template-columns: repeat(2, 1fr);
-    font-size: 20px;
+    gap: 20px;
   
     div:nth-child(1) {
       grid-column-start: 1;
-      grid-column-end: 4;
-      text-align: start;
-      padding: 40px;
-      font-size: 20px;
-      /* background: url("BottomPicture.jpg") center center no-repeat; */
-  
-      h1 {
-        text-align: center;
-        
-        padding-bottom: 30px;
-      }
-    }
-  
-    .grid-item {
-      font-size: 20px;
-      padding: 90px;
+      grid-column-end: 3;  
     }
   }
 }
  /* Laptop View */
-@media screen and (min-width: 1140px) and (max-width: 900px) {
+/* @media screen and (min-width: 1140px) and (max-width: 900px) {
   .grid-container--projects {
     display: grid;
     gap: 70px 150px;
@@ -470,7 +368,7 @@ span {
       text-align: center;
     }
   }
-}
+} */
 
 
 
