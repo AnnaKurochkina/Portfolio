@@ -1,15 +1,38 @@
 @use "./_variables" as *;
+@use "./_typography" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-text;
+}
+
+h1 {
+  font-family: $font-headings;
+}
+
+.photo img {
+  opacity: 0.7;
+  border-radius: $spacing-small;
+  border-style: outset;
+}
 
 header {
     background-color: $color-grey;
     display: grid;
     grid-template-columns: 180px auto;
     font-weight: bold;
+    z-index: 1030;
+    position: fixed;
+    width: 100%;
   
     brand {
       color: $color-info;
       justify-content: center;
-      padding: $padding-small;
+      padding: $spacing-small;
+      font-size: $font-size-small;
+      width: 300px;
       
   
       &:hover {
@@ -29,8 +52,9 @@ header {
       a {
         text-decoration: none;
         color: $color-info;
-        padding: $padding-small;
+        padding: $spacing-small;
         height: 100%;
+        font-size: $font-size-small;
   
         &:hover {
           text-decoration: underline;
@@ -51,10 +75,10 @@ header {
     align-items: center;
     background-color: $color-background;
     color: $color-info;
-    padding: $padding-large;
+    padding: $spacing-large;
   
     section {
-      padding-bottom: 50px;
+      padding-bottom: $spacing-large;
     }
   }
   
@@ -62,46 +86,47 @@ header {
     display: grid;
     gap: 50px;
     grid-template-columns: auto auto;
-    font-size: 20px;
+    font-size: $font-size-small;
+    padding-top: $spacing-large;
   
     div:nth-child(1) {
       align-self: center;
     }
   
     .grid-item {
-      font-size: 50px;
+      font-size: $font-size-large;
     }
   }
   
   .grid-container--projects {
     display: grid;
-    gap: 50px 50px;
-    grid-template-columns: repeat(4, 1fr);
+    gap: $spacing-small $spacing-small;
+    grid-template-columns: repeat(3, 1fr);
   
     div:nth-child(1) {
       grid-column-start: 1;
-      grid-column-end: 5;
+      grid-column-end: 4;
       background-color: $color-background;
-      /* border: none; */
+      font-size: $font-size-medium;
     }
   
     .grid-item {
       background-color: $color-grey;
-      padding: 20px;
-      font-size: 30px;
+      padding: $spacing-small;
+      font-size: $font-size-small;
       text-align: center;
     }
   }
   
   .grid-container--skills {
     display: grid;
-    gap: 30px;
+    gap: $spacing-medium;
     grid-template-columns: repeat(3, 1fr);
   
     div:nth-child(1) {
       grid-column-start: 1;
       grid-column-end: 4;
-      font-size: 30px;
+      font-size: $font-size-medium;
       text-align: center;
     }
   
@@ -110,7 +135,7 @@ header {
     }
   
     i {
-      font-size: 60px;
+      font-size: $font-size-large;
       color: $color-primary;
     }
   }
@@ -119,8 +144,8 @@ header {
     display: grid;
     gap: 20px 350px;
     grid-template-columns: repeat(2, 1fr);
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: $spacing-large;
+    padding-right: $spacing-large;
   
     div:nth-child(1) {
       grid-column-start: 1;
@@ -128,20 +153,20 @@ header {
     }
   
     .grid-item {
-      font-size: 20px;
+      font-size: $font-size-small;
   
       h1 {
         text-align: center;
-        padding-bottom: 30px;
-        font-size: 40px;
+        padding-bottom: $spacing-medium;
+        font-size: $font-size-large;
       }
   
       p {
-        margin-bottom: 20px;
+        margin-bottom: $spacing-small;
       }
   
       ul {
-        margin-left: 30px;
+        margin-left: $spacing-medium;
       }
     }
   
@@ -155,7 +180,7 @@ header {
     display: flex;
     flex-direction: row;
     background-color: $color-secondary;
-    padding: $padding-small;
+    padding: $spacing-small;
     text-align: center;
   
     a {
@@ -166,7 +191,7 @@ header {
       text-decoration: none;
       color: $color-info;
   
-      font-size: 20px;
+      font-size: $font-size-small;
       color: $color-background;
   
       &:active {
@@ -180,7 +205,7 @@ header {
     }
   
     i {
-      font-size: 30px;
+      font-size: $font-size-medium;
       color: $color-background;
   
       &:active {
@@ -194,23 +219,25 @@ header {
 @media screen and (min-width: 390px) and (max-width: 844px) {
   header {
     grid-template-columns: auto;
+    position: relative;
   
     brand {
       display: none;
     }
   }
 
-  .grid-container--banner {
+  section.grid-container--banner {
     display: grid;
-    gap: 20px;
+    gap: $spacing-small;
     grid-template-columns: repeat(1, 1fr);
+    padding-top: 0;
 
     .grid-item.photo {
       display: none;
     }
   }
   
-  .grid-container--projects {
+  section.grid-container--projects {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
 
@@ -220,7 +247,7 @@ header {
     }
   }
 
-  .grid-container--about {
+  section.grid-container--about {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
 
@@ -231,7 +258,7 @@ header {
 
     .grid-item.photo img {
       display: block;
-      padding-bottom: 30px;
+      margin-bottom: $spacing-medium;
       margin: auto;
     }
   }
@@ -239,20 +266,20 @@ header {
 
 /* Tablet View */
 @media screen and (min-width: 834px) and (max-width: 1194px) {
-  .grid-container--projects {
+  section.grid-container--projects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
     div:nth-child(1) {
       grid-column-start: 1;
-      grid-column-end: 4;
+      grid-column-end: 3;
     }
   }
 
-  .grid-container--about {
+  section.grid-container--about {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: $spacing-small;
 
     div:nth-child(1) {
       grid-column-start: 1;
