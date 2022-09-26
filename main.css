@@ -1,23 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Amaranth:wght@700&family=Open+Sans&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-}
-
 h1 {
   font-family: "Amaranth", sans-serif;
-}
-
-.photo img {
-  opacity: 0.7;
 }
 
 header {
   background-color: #343a40;
   display: grid;
-  grid-template-columns: 170px auto;
+  grid-template-columns: 180px auto;
+  font-weight: bold;
 }
 header brand {
   color: #5bc0de;
@@ -32,7 +22,6 @@ header nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-weight: bold;
   justify-content: end;
   width: 100%;
   color: #5bc0de;
@@ -66,7 +55,7 @@ main section {
 
 .grid-container--banner {
   display: grid;
-  gap: 50px 50px;
+  gap: 50px;
   grid-template-columns: auto auto;
   font-size: 20px;
 }
@@ -86,7 +75,7 @@ main section {
   grid-column-start: 1;
   grid-column-end: 5;
   background-color: #303139;
-  border: none;
+  /* border: none; */
 }
 .grid-container--projects .grid-item {
   background-color: #343a40;
@@ -237,3 +226,22 @@ footer i:active {
     grid-column-end: 3;
   }
 }
+/* @import "./_variables";
+@import "./_typography";
+@import "./_mediaQueries";
+@import "./_layout"; */
+/* @use "./_mediaQueries" as *; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.photo img {
+  opacity: 0.7;
+}
+
+/* $font-size-small: 20px;
+$font-size-medium: 30px;
+$font-size-large: 50px; */
