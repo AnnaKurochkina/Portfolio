@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Amaranth:wght@700&family=Open+Sans&display=swap");
-h1 {
-  font-family: "Amaranth", sans-serif;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Amaranth", sans-serif;
 }
 
 .photo img {
@@ -221,9 +221,11 @@ footer i:active {
     grid-column-start: 1;
     grid-column-end: 1;
   }
+  section.grid-container--about div:nth-child(1) p {
+    margin-top: 30px;
+  }
   section.grid-container--about .grid-item.photo img {
     display: block;
-    margin-bottom: 30px;
     margin: auto;
   }
 }

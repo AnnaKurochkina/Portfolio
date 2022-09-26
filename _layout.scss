@@ -1,5 +1,4 @@
-@use "./_variables" as *;
-@use "./_typography" as *;
+@use "./_variables"as *;
 
 * {
   margin: 0;
@@ -19,208 +18,208 @@ h1 {
 }
 
 header {
-    background-color: $color-grey;
-    display: grid;
-    grid-template-columns: 180px auto;
-    font-weight: bold;
-    z-index: 1030;
-    position: fixed;
-    width: 100%;
-  
-    brand {
-      color: $color-info;
-      justify-content: center;
-      padding: $spacing-small;
-      font-size: $font-size-small;
-      width: 300px;
-      
-  
-      &:hover {
-        background-color: $color-secondary;
-        color: $color-success;
-      }
-    }
-  
-    nav {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: end;
-      width: 100%;
-      color: $color-info;
-  
-      a {
-        text-decoration: none;
-        color: $color-info;
-        padding: $spacing-small;
-        height: 100%;
-        font-size: $font-size-small;
-  
-        &:hover {
-          text-decoration: underline;
-          background-color: $color-secondary;
-        }
-  
-        &:active {
-          color: $color-success;
-        }
-      }
-    }
-  }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-background;
-    color: $color-info;
-    padding: $spacing-large;
-  
-    section {
-      padding-bottom: $spacing-large;
-    }
-  }
-  
-  .grid-container--banner {
-    display: grid;
-    gap: 50px;
-    grid-template-columns: auto auto;
-    font-size: $font-size-small;
-    padding-top: $spacing-large;
-  
-    div:nth-child(1) {
-      align-self: center;
-    }
-  
-    .grid-item {
-      font-size: $font-size-large;
-    }
-  }
-  
-  .grid-container--projects {
-    display: grid;
-    gap: $spacing-small $spacing-small;
-    grid-template-columns: repeat(3, 1fr);
-  
-    div:nth-child(1) {
-      grid-column-start: 1;
-      grid-column-end: 4;
-      background-color: $color-background;
-      font-size: $font-size-medium;
-    }
-  
-    .grid-item {
-      background-color: $color-grey;
-      padding: $spacing-small;
-      font-size: $font-size-small;
-      text-align: center;
-    }
-  }
-  
-  .grid-container--skills {
-    display: grid;
-    gap: $spacing-medium;
-    grid-template-columns: repeat(3, 1fr);
-  
-    div:nth-child(1) {
-      grid-column-start: 1;
-      grid-column-end: 4;
-      font-size: $font-size-medium;
-      text-align: center;
-    }
-  
-    .grid-item {
-      text-align: center;
-    }
-  
-    i {
-      font-size: $font-size-large;
-      color: $color-primary;
-    }
-  }
-  
-  .grid-container--about {
-    display: grid;
-    gap: 20px 350px;
-    grid-template-columns: repeat(2, 1fr);
-    padding-left: $spacing-large;
-    padding-right: $spacing-large;
-  
-    div:nth-child(1) {
-      grid-column-start: 1;
-      grid-column-end: 3;
-    }
-  
-    .grid-item {
-      font-size: $font-size-small;
-  
-      h1 {
-        text-align: center;
-        padding-bottom: $spacing-medium;
-        font-size: $font-size-large;
-      }
-  
-      p {
-        margin-bottom: $spacing-small;
-      }
-  
-      ul {
-        margin-left: $spacing-medium;
-      }
-    }
-  
-    .photo img {
-      display: none;
-    }
-  }
-  
+  background-color: $color-grey;
+  display: grid;
+  grid-template-columns: 180px auto;
+  font-weight: bold;
+  z-index: 1030;
+  position: fixed;
+  width: 100%;
 
-  footer {
+  brand {
+    color: $color-info;
+    justify-content: center;
+    padding: $spacing-small;
+    font-size: $font-size-small;
+    width: 300px;
+
+
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-success;
+    }
+  }
+
+  nav {
     display: flex;
     flex-direction: row;
-    background-color: $color-secondary;
-    padding: $spacing-small;
-    text-align: center;
-  
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    color: $color-info;
+
     a {
-      display: block;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
       text-decoration: none;
       color: $color-info;
-  
+      padding: $spacing-small;
+      height: 100%;
       font-size: $font-size-small;
-      color: $color-background;
-  
-      &:active {
-        color: $color-success;
-      }
-  
+
       &:hover {
         text-decoration: underline;
         background-color: $color-secondary;
       }
-    }
-  
-    i {
-      font-size: $font-size-medium;
-      color: $color-background;
-  
+
       &:active {
         color: $color-success;
       }
     }
   }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-background;
+  color: $color-info;
+  padding: $spacing-large;
+
+  section {
+    padding-bottom: $spacing-large;
+  }
+}
+
+.grid-container--banner {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: auto auto;
+  font-size: $font-size-small;
+  padding-top: $spacing-large;
+
+  div:nth-child(1) {
+    align-self: center;
+  }
+
+  .grid-item {
+    font-size: $font-size-large;
+  }
+}
+
+.grid-container--projects {
+  display: grid;
+  gap: $spacing-small $spacing-small;
+  grid-template-columns: repeat(3, 1fr);
+
+  div:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: $color-background;
+    font-size: $font-size-medium;
+  }
+
+  .grid-item {
+    background-color: $color-grey;
+    padding: $spacing-small;
+    font-size: $font-size-small;
+    text-align: center;
+  }
+}
+
+.grid-container--skills {
+  display: grid;
+  gap: $spacing-medium;
+  grid-template-columns: repeat(3, 1fr);
+
+  div:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-size: $font-size-medium;
+    text-align: center;
+  }
+
+  .grid-item {
+    text-align: center;
+  }
+
+  i {
+    font-size: $font-size-large;
+    color: $color-primary;
+  }
+}
+
+.grid-container--about {
+  display: grid;
+  gap: 20px 350px;
+  grid-template-columns: repeat(2, 1fr);
+  padding-left: $spacing-large;
+  padding-right: $spacing-large;
+
+  div:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .grid-item {
+    font-size: $font-size-small;
+
+    h1 {
+      text-align: center;
+      padding-bottom: $spacing-medium;
+      font-size: $font-size-large;
+    }
+
+    p {
+      margin-bottom: $spacing-small;
+    }
+
+    ul {
+      margin-left: $spacing-medium;
+    }
+  }
+
+  .photo img {
+    display: none;
+  }
+}
 
 
-  /* Mobile View */
+footer {
+  display: flex;
+  flex-direction: row;
+  background-color: $color-secondary;
+  padding: $spacing-small;
+  text-align: center;
+
+  a {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: $color-info;
+
+    font-size: $font-size-small;
+    color: $color-background;
+
+    &:active {
+      color: $color-success;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      background-color: $color-secondary;
+    }
+  }
+
+  i {
+    font-size: $font-size-medium;
+    color: $color-background;
+
+    &:active {
+      color: $color-success;
+    }
+  }
+}
+
+
+/* Mobile View */
 @media screen and (min-width: 390px) and (max-width: 844px) {
   header {
     grid-template-columns: auto;
     position: relative;
-  
+
     brand {
       display: none;
     }
@@ -236,7 +235,7 @@ header {
       display: none;
     }
   }
-  
+
   section.grid-container--projects {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -254,11 +253,14 @@ header {
     div:nth-child(1) {
       grid-column-start: 1;
       grid-column-end: 1;
+
+      p {
+        margin-top: $spacing-medium;
+      }
     }
 
     .grid-item.photo img {
       display: block;
-      margin-bottom: $spacing-medium;
       margin: auto;
     }
   }
