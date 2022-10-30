@@ -56,7 +56,6 @@ header {
       font-size: $font-size-small;
 
       &:hover {
-        text-decoration: underline;
         background-color: $color-secondary;
       }
 
@@ -78,6 +77,15 @@ main {
 
   section {
     padding-bottom: $spacing-large;
+
+    a {
+      text-decoration: none;
+      color: rgb(137, 82, 154);
+
+      &:hover {
+        color: rgb(77, 188, 151);
+      }
+    }
   }
 }
 
@@ -244,6 +252,7 @@ footer {
       grid-column-start: 1;
       grid-column-end: 1;
     }
+
   }
 
   section.grid-container--about {
